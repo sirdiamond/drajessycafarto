@@ -1,0 +1,61 @@
+---
+import AboutItem from "../components/AboutItem.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro"
+---
+
+<Layout title="Sobre Mim - Dra. Jessyca Farto - Psiquiatra" clip={false}>
+    <Header title="QUEM SOU eU" subtitle="SOBRE" subcolor="MIM"></Header>
+
+    <div class="container mx-auto p-4 flex flex-col gap-6 md:flex-row md:justify-between">
+
+
+            <img class="w-60 h-60 self-center rounded-full object-cover bg-zinc-200 border-4 border-gray-300 md:w-1/2 md:h-full md:border-4 md:bg-transparent md:self-start  md:object-cover md:border-violet-700 md:rounded-2xl hover:scale-105 transition duration-300" src="/img1.jpg" />
+  
+
+
+
+        
+        <div class="flex flex-col gap-4 md:max-w-[50%]">
+            <p class="text-gray-100 text-xl pop">INFORMAÇÕES PESSOAIS</p>
+            <AboutItem title="NOME" text="Jéssyca Fernanda de Lima Farto"></AboutItem>
+            <AboutItem title="CRM" text="9999"></AboutItem>
+            <AboutItem title="psiqUIATRA" text="RQE: 108411"></AboutItem>
+            <AboutItem title="EMAIL" text="jessycalfarto@gmail.com"></AboutItem>
+            <AboutItem title="Telefone" text='+55 (19) 99615-5638'></AboutItem>
+            <div class="flex flex-col ">
+                <p class="uppercase text-sm text-gray-400">Currículo lattes</p>
+                <p class="text-sm text-gray-200 font-semibold underline"> <a href="http://lattes.cnpq.br/2214720485848243" target="_blank">Lattes</a></p>
+            </div>
+    
+    
+    
+    
+            <p class="text-gray-100 text-xl pop">SOBRE MIM</p>
+            <p>
+                Sou a Dra. Jéssyca Farto, graduada em Medicina pela renomada Faculdade de Medicina de São José do Rio Preto - FAMERP, concluindo meus estudos no período de 2013 a 2018. Durante minha trajetória acadêmica, dediquei-me não apenas ao aprendizado técnico, mas também ao aprimoramento em atividades extracurriculares relacionadas ao ensino e assistência médica. Participei ativamente em campanhas, projetos e programas de extensão, buscando sempre contribuir para a melhoria da saúde e o bem-estar da comunidade.<br><br> 
+            </p>
+    
+    
+            <p class="text-gray-100 text-xl pop ">MINHA ESPECIALIZAÇÃO</p>
+            <p>
+                Ao longo de minha carreira, desenvolvi uma paixão especial pela psiquiatria, compreendendo a importância vital da saúde mental na vida das pessoas. Conscientizei-me de que as dores psíquicas podem ser tão debilitantes quanto as dores físicas e, a partir desse momento, minha missão tornou-se ajudar meus pacientes a aliviarem seus fardos emocionais.<br><br> 
+            </p>
+    
+            <p class="text-gray-100 text-xl pop uppercase">Técnica EMDR:</p>
+            <p>
+                Acredito no poder das terapias modernas e, por isso, tornei-me especialista na Técnica EMDR (Eye Movement Desensitization and Reprocessing), uma abordagem terapêutica inovadora e eficaz para o tratamento de traumas e outras questões emocionais. Essa técnica utiliza estímulos bilaterais, como o movimento dos olhos, para ajudar o cérebro a processar memórias traumáticas e experiências difíceis, promovendo a cura e o crescimento pessoal.<br><br> 
+            </p>
+    
+            <p class="text-gray-100 text-xl pop uppercase">Minha Missão:</p>
+            <p>
+                Através de um olhar humanizado e compassivo, meu objetivo é proporcionar aos meus pacientes um espaço seguro para expressar suas angústias, medos e inseguranças. Busco trabalhar em parceria com eles, desenvolvendo um plano terapêutico personalizado para suas necessidades individuais. Acredito que cada indivíduo é único e, portanto, o tratamento deve ser adaptado a cada história de vida.<br><br> 
+            </p>
+        </div>
+ 
+    </div>
+    
+    
+
+    
+</Layout>

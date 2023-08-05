@@ -1,0 +1,35 @@
+---
+import { Icon } from 'astro-icon'
+interface Props{
+    isActive: boolean;
+    icon: string;
+    text: string;
+    link: string;
+}
+
+const {isActive, icon, text, link = '#' } = Astro.props
+---
+
+<li class="relative flex justify-center items-center group">
+
+    <span 
+        class="absolute right-7  bg-violet-700 px-5 py-3 text-white rounded-l-full text-md hidden md:group-hover:block whitespace-nowrap" 
+        x-intersect="$el.classList.add('slide-in-right')"
+        
+        >
+        {text}
+    </span>
+
+    <a 
+        class="bg-neutral-700 group-hover:bg-violet-700 rounded-full w-12 h-12 flex justify-center items-center z-10" 
+        href={link}
+        class:list={[{ 'bg-violet-700': isActive }]}>
+
+        <Icon 
+        class=" w-4  text-neutral-200 group-hover:text-white" 
+        name={icon} 
+        class:list={[{ 'text-white': isActive }]}
+        />
+    </a>
+
+</li>

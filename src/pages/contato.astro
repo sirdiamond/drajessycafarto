@@ -1,0 +1,48 @@
+---
+import ContactItem from "../components/ContactItem.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro"
+import { Icon } from 'astro-icon'
+---
+
+
+<Layout title="Contato - Dra. Jessyca Farto" clip={false}>
+    <Header title="contato" subtitle="Entre em" subcolor="contato"></Header>
+    <div class="p-4 xl:flex xl:gap-6 container mx-auto flex-1">
+        
+        <div class="flex flex-col gap-6">
+            <p class="text-gray-200 text-xl pop">AGUARDO O SEU CONTATO</p>
+            <p class="text-md">
+                Sinta-se à vontade para marcar sua consulta presencial ou online. Estou aqui para oferecer apoio e tratamento especializado em questões de saúde mental. Juntos, trabalharemos pelo seu bem-estar emocional.
+            </p>
+    
+            <ContactItem icon='mdi:address-marker' title="endereço" subtitle="Av. Ulhoa Cintra, 33 - Centro - Piracicaba/SP"></ContactItem>
+    
+            <ContactItem icon='mdi:email' title="email" subtitle="jessycafarto@gmail.com"></ContactItem>
+    
+            <ContactItem icon='ic:round-phone' title="TELEFONE" subtitle="(19) 3422-1682"></ContactItem>
+    
+            <ul class="flex gap-4 my-4">
+                <li class="w-12 h-12 bg-neutral-800 rounded-full flex justify-center items-center group hover:bg-violet-700 duration-300">
+                    <a href="" target="_blank"><Icon class="w-8 h-8 text-gray-500 group-hover:text-white" name="mdi:instagram"></Icon></a>
+                </li>
+                <li class="w-12 h-12 bg-neutral-800 rounded-full flex justify-center items-center group hover:bg-violet-700 duration-300">
+                    <a href="" target="_blank"><Icon class="w-8 h-8 text-gray-500 group-hover:text-white" name="mdi:youtube"></Icon></a>
+                </li>
+                <li class="w-12 h-12 bg-neutral-800 rounded-full flex justify-center items-center group hover:bg-violet-700 duration-300">
+                    <a href="" target="_blank"><Icon class="w-8 h-8 text-gray-500 group-hover:text-white" name="mdi:facebook"></Icon></a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="grow flex flex-col gap-6">
+            <p class="text-gray-200 text-xl pop uppercase">localização</p>
+
+            <iframe class="w-full xl:min-w-[700px] aspect-video" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14720.289688124814!2d-47.6538027!3d-22.7255494!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c6319c372e40df%3A0xca4789683aa49eb5!2sCl%C3%ADnica%20Millenium%20-%20Sa%C3%BAde%20Integrativa%20e%20Est%C3%A9tica%20Funcional!5e0!3m2!1sen!2sbr!4v1690747770166!5m2!1sen!2sbr"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+    </div> 
+
+
+
+</Layout>

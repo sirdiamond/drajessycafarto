@@ -1,0 +1,15 @@
+---
+
+import MenuItem from './MenuItem.astro';
+---
+<ul class="fixed bottom-0 flex justify-around w-full bg-neutral-800 py-2 md:flex-col md:bg-transparent md:w-auto md:bg-orange-200 md:right-7 md:top-1/4 md:bottom-auto md:gap-4 z-20" x-data> 
+    <MenuItem isActive={Astro.url.pathname == '/'} icon="ion:home" text="Home" link="/"/>
+    <MenuItem isActive={Astro.url.pathname == '/sobre-mim'} icon="fa:user" text="Sobre mim" link="/sobre-mim"/>
+    <MenuItem isActive={Astro.url.pathname == '/blog'} icon="ion:book" text="Artigos" link="/blog"/>
+    <MenuItem isActive={Astro.url.pathname == '/contato'} icon="ic:round-email" text="Contato" link="/contato"/>
+    
+</ul>
+
+<div class="w-full h-16">
+
+</div>

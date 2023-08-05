@@ -1,0 +1,22 @@
+---
+import CardPost from '../components/CardPost.astro';
+import Header from '../components/Header.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Meu blog - Dra. Jessyca Farto" clip={false}>
+    <div class="container mx-auto min-h-screen">
+        <Header title="POST" subtitle="MEU BLOG" subcolor="blog"></Header>
+
+        <div class="grid gap-4 sm:grid-cols-2 md:px-16 lg:grid-cols-3 p-4">
+            <CardPost />
+            <CardPost />
+            <CardPost />
+            <CardPost />
+        </div>
+
+        <div class="w-full h-20">
+
+        </div>
+    </div>
+</Layout>

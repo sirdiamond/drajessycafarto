@@ -1,0 +1,80 @@
+--- 
+import '../base.css';
+import { Icon } from 'astro-icon'
+import Menu from '../components/Menu.astro'
+
+interface Props {
+	title: string;
+	clip: boolean;
+}
+
+const { title, clip } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description">
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+		<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+	</head>
+	<body class="bg-neutral-900 text-gray-300 min-h-screen" class:list={[{ 'overflow-clip': clip }]} x-data>
+		<div class="fixed top-0 l-0 w-screen h-screen bg-neutral-800 z-10" x-intersect="$el.classList.add('slide-out-bottom')">
+
+		</div>
+
+		<div  x-intersect="$el.classList.add('slide-in-bottom')">
+			<slot />
+		</div>
+
+
+		<Menu />
+
+		<a href="https://api.whatsapp.com/send?phone=51955081075&text=Gostaria%20de%20mais%20informações%20para%20marcar%20uma%20consulta" class="relative float flex justify-center items-center" target="_blank">
+			<span class="absolute  right-16  text-sm bg-neutral-800 w-36 rounded-md py-1 text-neutral-500">Agendar Consulta</span>
+			<Icon class=" w-8 text-white" name="mdi:whatsapp" />
+		</a>
+
+
+	</body>
+</html>
+<style is:global>
+
+    * {
+		outline: 0px solid red;
+        outline-offset: -1px;
+		font-family: 'Open Sans', sans-serif;
+	}
+
+	.pop{
+		font-family: 'Poppins', sans-serif;
+		font-weight: 700;
+	}
+
+	.float{
+		position:fixed;
+		width:55px;
+		height:55px;
+		top:20px;
+		right:20px;
+		background-color:#25d366;
+		color:#FFF;
+		border-radius:50px;
+		text-align:center;
+	font-size:30px;
+		box-shadow: 2px 2px 3px #999;
+	z-index:100;
+	}
+</style>

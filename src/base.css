@@ -1,0 +1,52 @@
+/* The integration's default injected base.css file */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+ @keyframes slide-out-bottom {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    75%{
+      opacity: 0.9;
+    }
+    100% {
+      transform: translateY(1200px);
+      opacity: 0;
+    }
+  }
+  .slide-out-bottom {
+	animation: slide-out-bottom 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  }
+
+
+  @keyframes slide-in-bottom {
+    0% {
+      transform: translateY(10%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  .slide-in-bottom {
+    animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+
+
+ @keyframes slide-in-right {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: auto;
+    opacity: 1;
+  }
+}
+.slide-in-right {
+	animation: slide-in-right 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+}

@@ -1,0 +1,15 @@
+---
+interface Props {
+    title: string;
+    subtitle: string;
+    subcolor: string;
+}
+
+const {title, subtitle, subcolor} = Astro.props;
+---
+
+
+<header class="text-center pt-16">
+    <h1 class="pop text-6xl md:text-8xl text-neutral-800 uppercase opacity-50">{title}</h1>
+    <h1 class="pop text-4xl md:text-5xl font-bold  z-20 whitespace-nowrap -translate-y-12 md:-translate-y-16 uppercase">{subtitle} <span class="text-violet-700 font-black pop">{subcolor}</span></h1>
+</header>

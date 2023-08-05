@@ -1,0 +1,33 @@
+---
+import Layout from "../../layouts/Layout.astro"
+
+import PostTitle from '../../components/PostTitle.astro'
+import Icon from "astro-icon";
+---
+
+<Layout title="Dra. Jéssyca Farto" clip={false}>
+    <div class="container mx-auto flex flex-col gap-6 items-center">
+        <PostTitle title="Some text" subtitle="sub"></PostTitle>
+
+        <p class="text-center text-neutral-400">Assista vídeo abaixo e entenda como funciona o tratamento moderno de ansiedade utilizando o EMDR.</p>
+    
+        <iframe class="w-full aspect-video px-4 max-w-4xl" src="https://www.youtube.com/embed/s4TNaQetrHk?si=cvlmw4Yg7zDOzqKV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    
+        <a href="#" class="flex items-center justify-between text-md font-bold border border-violet-700 rounded-full w-60 pl-6
+				hover:text-white hover:bg-violet-700 transition duration-500
+				">MARCAR CONSULTA <Icon class="w-10 text-white bg-violet-700 rounded-full" name="uil:arrow-right" /></a>
+   
+        <p class="p-4 text-neutral-300">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati id, beatae pariatur voluptatum hic exercitationem sapiente reprehenderit, molestias magnam libero ratione magni odio deleniti assumenda dolores maiores quod distinctio! Earum!
+            <br>
+            <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit fuga sed, quod maiores at quidem quas sint iste sunt inventore impedit quia sequi veritatis atque autem similique unde, mollitia laborum!
+        </p>
+
+        <div class="w-full border-b-2 border-neutral-800"></div>
+
+        <img class="w-60 h-60 md:w-96 md:h-96 self-center rounded-full object-scale-down bg-black border-4 border-gray-800" src="/dra.jessyca.farto.png" />
+        <p class="font-semibold mb-4 text-center">Dra. Jéssyca Farto - CRM-SP 9999 <br>
+        <span class="font-normal text-neutral-500">Médica Psiquiatra</span></p>
+
+    </div>
+ </Layout>

@@ -1,0 +1,65 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Icon } from 'astro-icon'
+
+---
+
+<Layout title="Dra. Jessyca Farto - Médica Psiquiatra" clip={true}>
+
+	<div class="fixed top-0 -z-10 rec w-48 h-screen bg-violet-700 scale-150 hidden md:block ">
+
+	</div>
+
+	<div class=" w-screen h-screen flex justify-center items-center  p-4 pb-12 md:h-screen" >
+		<div class="flex flex-col gap-4 items-center md:flex-row md:w-full md:h-screen  md:items-center md:justify-around md:pr-16 md:pl-4 ">
+			<img class="w-60 h-60 self-center rounded-full object-scale-down bg-black border-4 border-gray-800 md:shadow-lg md:shadow-gray-700 md:rounded-3xl md:h-[93vh] md:object-cover md:w-[30vh] lg:w-[50vh] xl:w-[60vh]" src="/dra.jessyca.farto.png" />
+
+			<div class="flex flex-col gap-8 items-center md:items-start ">
+				<div>
+					<h1 class="pop uppercase text-center  text-3xl md:text-5xl text-violet-700 md:text-start">Dra. Jessyca Farto</h1>
+					<h1 class="pop uppercase text-center text-gray-100 text-2xl md:text-4xl md:text-start">Médica Psiquiatra</h1>
+				</div>
+	
+	
+				<p class="text-center text-md text-gray-100 antialiased leading-7 md:text-start md:leading-9 md:max-w-sm lg:max-w-3xl">Sou médica psiquiatra especializada no tratamento de ansiedade e depressão, utilizando uma abordagem integrativa que combina a medicina convencional com técnicas inovadoras, como o EMDR. Atendo por telemedicina e presencialmente em Piracicaba-SP</p>
+				
+				<a href="/sobre-mim" class="flex items-center justify-between text-md font-bold border border-violet-700 rounded-full w-56 pl-6
+				hover:text-white hover:bg-violet-700 transition duration-500
+				">MAIS SOBRE MIM <Icon class="w-12 text-white bg-violet-700 rounded-full" name="uil:arrow-right" /></a>
+				
+			</div>
+
+		</div>
+	</div>
+
+
+
+
+
+</Layout>
+
+
+<style>
+.rec{
+	height: 2040px;
+	transform: matrix(2.5, -0.258819, 0.258819, 1.1, -0, -100);
+}
+
+.test{
+	font-size: 100px;
+}
+
+@media (min-width: 768px) {
+	.rec{
+		transform: matrix(3.5, -0.258819, 0.258819, 1.1, -120, -100);
+	}
+}
+
+@media (min-width: 1280px) {
+	.rec{
+		transform: matrix(4.5, -0.258819, 0.258819, 1.0, -40, -100);
+	}
+}
+
+
+</style>
